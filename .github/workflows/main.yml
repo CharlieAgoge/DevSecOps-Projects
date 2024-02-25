@@ -40,3 +40,10 @@ jobs:
       - name: Get WordPress Instance IP
         id: get_ip
         run: echo "::set-output name=ip_address::$(terraform output -json instance_public_ip | jq -r '.')"
+
+      # Install Trivy
+      - name: Install Trivy
+        run: |
+          wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+          echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -cs) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+          sudo apt-get update && sudo apt-get install -yq trivy
