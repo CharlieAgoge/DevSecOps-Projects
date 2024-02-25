@@ -1,11 +1,11 @@
 provider "aws" {
   region = "eu-west-2" # London region
 }
-resource "aws_s3_bucket" "terraform_state" {
-  bucket = "terraform-up-and-running-state-NAME"
-}
 resource "aws_s3_bucket" "terraform_today" {
   bucket = "terraform-up-and-running-state-today"
+}
+resource "aws_s3_bucket" "terraform-up-and-running-state-charlie" {
+  bucket = "terraform-up-and-running-state-charlie"
 }
 terraform {
   backend "s3" {
@@ -21,7 +21,4 @@ resource "aws_instance" "test5" {
   tags = {
     Name = "sundayexample-instance"
 }
-}
-resource "aws_s3_bucket" "now" {
-  bucket = "now1"
 }
