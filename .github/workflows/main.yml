@@ -64,3 +64,9 @@ jobs:
         hide-progress: false
         format: 'table'
         ignore-unfixed: true
+
+    - name: Scan WordPress Docker image
+        run: |
+          docker pull wordpress:latest
+          trivy wordpress:latest        
+             
