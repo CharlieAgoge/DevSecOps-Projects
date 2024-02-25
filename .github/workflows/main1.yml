@@ -33,7 +33,7 @@ jobs:
       with:
         scan-type: 'image'
         scanners: 'vuln'
-        scan-ref: '.'
+        scan-ref: 'wordpress:latest'
         hide-progress: false
         format: 'table'
         ignore-unfixed: true
