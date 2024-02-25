@@ -32,8 +32,8 @@ jobs:
       - name: Initialize Terraform
         run: terraform init
 
-      # Deploy WordPress with Terraform
-      - name: Deploy WordPress with Terraform
+      # Deploy Terraform
+      - name: Deploy Terraform
         run: terraform apply -auto-approve
 
       # Get WordPress instance public IP
@@ -64,20 +64,3 @@ jobs:
         hide-progress: false
         format: 'table'
         ignore-unfixed: true
-
-         build:
-    name: IaC Scan
-    runs-on: ubuntu-20.04
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-      
-    - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@master
-        with:
-          image-ref: 'docker.io/my-organization/my-app:${{ github.sha }}'
-          format: 'table'
-          exit-code: '1'
-          ignore-unfixed: true
-          vuln-type: 'os,library'
-          severity: 'CRITICAL,HIGH'
