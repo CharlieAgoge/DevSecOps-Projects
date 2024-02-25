@@ -20,7 +20,5 @@ resource "aws_instance" "test5" {
   instance_type = "t2.micro"  # Change to the desired instance type
   tags = {
     Name = "sundayexample-instance"
-resource "aws_s3_bucket" "new-charlie" {
-  bucket = "new-charlie"
 }
 }
