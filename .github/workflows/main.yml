@@ -68,5 +68,5 @@ jobs:
     - name: Scan WordPress Docker image
       run: |
           docker pull wordpress:latest
-          trivy wordpress:latest        
+          trivy image wordpress:latest        
              
