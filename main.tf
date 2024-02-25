@@ -7,6 +7,9 @@ resource "aws_s3_bucket" "terraform_today" {
 resource "aws_s3_bucket" "terraform-up-and-running-state-charlie" {
   bucket = "terraform-up-and-running-state-charlie"
 }
+resource "aws_s3_bucket" "new-charlie" {
+  bucket = "new-charlie"
+}
 terraform {
   backend "s3" {
     # Replace this with your bucket name!
