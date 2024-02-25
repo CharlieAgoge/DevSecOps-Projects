@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy-and-scan:
-    name: Deploy WordPress on EC2 and Scan with Trivy
+    name: Deploy WordPress on EC2
     runs-on: ubuntu-latest
 
     steps:
@@ -49,7 +49,7 @@ jobs:
           sudo apt-get update && sudo apt-get install -yq trivy
 
   build:
-    name: Build
+    name: IaC Scan
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout code
