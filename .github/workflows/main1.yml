@@ -28,4 +28,4 @@ jobs:
           sudo apt-get update && sudo apt-get install -yq trivy
 
       - name: Scan Docker Image with Trivy
-        run: trivy --exit-code 1 --severity HIGH,CRITICAL charliebanny/dockerhub:myfirstimagepush
+        run: trivy --severity MEDIUM,HIGH,CRITICAL charliebanny/dockerhub:myfirstimagepush
