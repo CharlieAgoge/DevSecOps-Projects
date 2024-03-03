@@ -18,7 +18,7 @@ jobs:
         uses: docker/setup-buildx-action@v1
       
       - name: Build Docker Image
-        run: docker build wordpress:latest
+        run: docker build wordpress
 
       # Install Trivy
       - name: Install Trivy
