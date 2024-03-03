@@ -27,19 +27,5 @@ jobs:
           echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -cs) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
           sudo apt-get update && sudo apt-get install -yq trivy
 
-  build:
-    name: Image scan
-    runs-on: ubuntu-20.04
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Run Trivy vulnerability scanner in repo mode
-      uses: aquasecurity/trivy-action@master
-      with:
-        scan-type: 'image'
-        scanners: 'vuln'
-        scan-ref: 'wordpress:latest'
-        hide-progress: false
-        format: 'table'
-        ignore-unfixed: true
+      - name: Scan Docker Image with Trivy
+        run: trivy --exit-code 1 --severity HIGH,CRITICAL charliebanny/dockerhub:myfirstimagepush
