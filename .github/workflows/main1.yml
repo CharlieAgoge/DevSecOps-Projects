@@ -44,7 +44,7 @@ jobs:
       with:
         scan-type: 'image'
         scanners: 'vuln'
-        trivy image: charliebanny/dockerhub:myfirstimagepush
+        image-ref: charliebanny/dockerhub:myfirstimagepush
         scan-ref: '.'
         hide-progress: false
         format: 'table'
