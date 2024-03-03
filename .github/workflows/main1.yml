@@ -43,7 +43,6 @@ jobs:
       uses: aquasecurity/trivy-action@master
       with:
         scan-type: 'fs'
-        scanners: 'misconfig'
         scan-ref: '.'
         hide-progress: false
         format: 'table'
