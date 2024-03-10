@@ -21,10 +21,6 @@ jobs:
         with:
           python-version: 3.x
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-
             Run Bandit SAST scan
       - name: Run Bandit SAST scan
         run: |
