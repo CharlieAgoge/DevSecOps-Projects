@@ -1,0 +1,39 @@
+name: SAST Scan
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  sast:
+    name: SAST Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Install dependencies
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+            Run Bandit SAST scan
+      - name: Run Bandit SAST scan
+        run: |
+          bandit -r .
+
+      # Or, if you're using CodeQL
+      # - name: Initialize CodeQL
+      #   uses: github/codeql-action/init@v1
+
+      # - name: Run CodeQL Analysis
+      #   uses: github/codeql-action/analyze@v1
