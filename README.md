@@ -15,8 +15,7 @@ This document outlines a DevSecOps project implementation incorporating Static A
 SAST involves analyzing the application's source code or binary code without executing it. This is done to identify security vulnerabilities, coding errors, and other issues in the codebase.
 
 #### Tools:
-- **SonarQube**: Provides static code analysis to identify bugs, vulnerabilities, and code smells in various programming languages.
-- **Checkmarx**: Offers comprehensive SAST capabilities to identify and remediate security vulnerabilities in source code.
+- **CodeQl**: Provides static code analysis to identify bugs, vulnerabilities, and code smells in various programming languages.
 
 ### 2. Software Composition Analysis (SCA)
 SCA focuses on identifying and managing open-source components and third-party libraries used in the application. It helps in detecting known vulnerabilities in dependencies.
