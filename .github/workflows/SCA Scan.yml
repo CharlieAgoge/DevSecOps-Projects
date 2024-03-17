@@ -1,4 +1,4 @@
-name: Pull Docker Image and Scan with Trivy
+name: Pull Docker Image and SCA Scan
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy-and-scan:
-    name: Deploy WordPress on EC2
+    name: Pull Docker Image and SCA Scan
     runs-on: ubuntu-latest
 
     steps:
