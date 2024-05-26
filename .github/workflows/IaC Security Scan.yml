@@ -1,4 +1,4 @@
-name: Deploy WordPress on EC2 and IaC Scan
+name: IaC Security Scan
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy-and-scan:
-    name: Run Iac Security Scan
+    name: Run IaC Security Scan
     runs-on: ubuntu-latest
 
     steps:
