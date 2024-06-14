@@ -12,7 +12,7 @@ This security document outlines a DevSecOps project implementation incorporating
 
 ## Components
 ### 1. Static Application Security Testing (SAST)
-SAST involves analyzing the application's source code or binary code without executing it. This is done to identify security vulnerabilities, coding errors, and other issues in the codebase.
+SAST involves analyzing the application's source code or binary code without executing it. This is done to identify security vulnerabilities, coding errors, and other issues in the codebase
 
 #### Tools:
 - **CodeQl**: Provides static code analysis to identify bugs, vulnerabilities, and code smells in various programming languages.
