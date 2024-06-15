@@ -16,7 +16,7 @@ IaC scanning ensures that the infrastructure configuration code adheres to secur
 
 #### Tools:
 - **Terraform Compliance**: Assesses Terraform scripts against security policies defined using BDD-style language to ensure compliance.
-- **Trivyw**: Provides automated IaC scanning to identify security misconfigurations across AWS, Azure, and GCP cloud environments.
+- **Trivy**: Provides automated IaC scanning to identify security misconfigurations across AWS, Azure, and GCP cloud environments.
 
 ### 2. Static Application Security Testing (SAST)
 SAST involves analyzing the application's source code or binary code without executing it. This is done to identify security vulnerabilities, coding errors, and other issues in the codebase
