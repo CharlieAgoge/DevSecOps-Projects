@@ -11,7 +11,7 @@ This security document outlines a DevSecOps project implementation incorporating
 - Enable PR blocking for Critical and High Vulnerabilities.
 
 ## Components
-### 3. Infrastructure as Code (IaC) Scanning
+### 1. Infrastructure as Code (IaC) Scanning
 IaC scanning ensures that the infrastructure configuration code adheres to security best practices and compliance standards. It helps in identifying misconfigurations and security loopholes in cloud infrastructure.
 
 #### Tools:
