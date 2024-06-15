@@ -1,4 +1,4 @@
-name: Deploy WordPress on EC2 and IaC Scan
+name: AWS Automation Project 1
 
 on:
   push:

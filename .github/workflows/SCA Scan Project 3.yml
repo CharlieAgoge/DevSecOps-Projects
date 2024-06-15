@@ -1,4 +1,4 @@
-name: Pull Docker Image and SCA Scan
+name: SCA Scan Project 3
 
 on:
   push:
