@@ -1,4 +1,4 @@
-name: IaC Security Scan
+name: IaC Security Scan Project 1
 
 on:
   push:
