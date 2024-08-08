@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy-and-scan:
-    name: Deploy WordPress on EC2 and IaC Scan
+    name: Deploy WordPress on EC2 and IaC Scans
     runs-on: ubuntu-latest
 
     steps:
